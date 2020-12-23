@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\monjurul.khan\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\monjurul.khan\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_InventoryManagementSystem.1652968451.00" t="ExcludeRecursive" />
+    <e p="C:\Users\monjurul.khan\AppData\Roaming\JetBrains\Rider2020.3\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\monjurul.khan\RiderProjects\InventoryManagementSystem" t="IncludeFlat">
+      <e p="Ims.Infrastructure" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Ims.Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="Interfaces" t="Include">
+          <e p="IDbConnectionFactory.cs" t="Include" />
+          <e p="Irepository.cs" t="Include" />
+        </e>
+        <e p="Model" t="Include">
+          <e p="BaseEntity.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Ims.Infrastructure.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Repository" t="Include">
+          <e p="DbconnectionFactory.cs" t="Include" />
+          <e p="ProductRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="InventoryManagementSystem.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

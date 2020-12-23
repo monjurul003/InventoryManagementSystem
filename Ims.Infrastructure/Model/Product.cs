@@ -2,7 +2,7 @@
 
 namespace Ims.Infrastructure.Model
 {
-    public class Products : BaseEntity
+    public class Product : BaseEntity
     {
         [Key]
         public int Id { set; get; }
