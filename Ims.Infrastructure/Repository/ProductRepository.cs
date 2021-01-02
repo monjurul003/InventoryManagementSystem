@@ -2,61 +2,62 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
 using Dapper;
 using Ims.Infrastructure.Interfaces;
 using Ims.Infrastructure.Model;
 
 namespace Ims.Infrastructure.Repository
 {
-    public class ProductRepository : Irepository<Product>
+    public class ProductRepository : IRepository<Product>
     {
-        private IDbConnection _connection;
-
-        public ProductRepository(IDbConnection connection)
+        private readonly string TableName = "ims.products";
+        public Task<bool> Insert(Product item, DbConnection connection)
         {
-            _connection = connection;
+            var sql = $"INSERT INTO ims.products (name, price) VALUES (@Name, @Price);";
+            var param = new DynamicParameters();
+            param.Add("@Name", item.Name);
+            param.Add("@Price", item.Price);
+            return connection.ExecuteScalarAsync<bool>(sql, param);
         }
 
-        public void Add(Product item)
+        public Task<bool> Remove(int id, DbConnection connection)
         {
-            using (IDbConnection dbConn = _connection)
-            {
-                dbConn.Open();
-                dbConn.Execute("INSERT INTO ims.products (name, price) VALUES (@Name, @Price)", item);
-            }
+            var sql = $"DELETE FROM ims.products WHERE Id=@Id;";
+            var param = new DynamicParameters();
+            param.Add("@Id", id);
+            return connection.ExecuteScalarAsync<bool>(sql, param);
         }
 
-        public void Remove(int id)
+        public Task<bool> Update(Product item, DbConnection connection)
         {
-            using (IDbConnection dbConn = _connection)
-            {
-                dbConn.Open();
-                dbConn.Execute("DELETE FROM ims.produsts WHERE Id=@Id", new {Id = id});
-            }
+            var sql = $"UPDATE {TableName} SET name=@Name, price=@Price WHERE id = @Id;";
+            var param = new DynamicParameters();
+            param.Add("@Name", item.Name);
+            param.Add("@Price", item.Price);
+            return connection.ExecuteScalarAsync<bool>(sql,param);
         }
 
-        public void Update(Product item)
+        public Task<Product> FindById(int id, DbConnection connection)
         {
-            using (IDbConnection dbConn = _connection)
-            {
-                dbConn.Open();
-                dbConn.Execute("UPDATE ims.products SET name=@Name, price=@Price WHERE id = @Id", item);
-            }
+            var sql = $"Select * FROM {TableName} WHERE id=@Id";
+            var param = new DynamicParameters();
+            param.Add("@Id", id);
+            return connection.QuerySingleAsync<Product>(sql, param);
+        }
+        public Task<Product> FindByName(string name, DbConnection connection)
+        {
+            var sql = $"Select * FROM {TableName} WHERE name=@Name;";
+            var param = new DynamicParameters();
+            param.Add("@Name", name);
+            return connection.QuerySingleAsync<Product>(sql, param);
         }
 
-        public Product FindBy(int id)
+        public Task<IEnumerable<Product>> FindAll(DbConnection connection)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public IEnumerable<Product> FindAll()
-        {
-            using (IDbConnection dbConn = _connection)
-            {
-                dbConn.Open();
-                return dbConn.Query<Product>("SELECT * FROM ims.products");
-                
-            }
+            var sql = $"SELECT * FROM {TableName}";
+            return connection.QueryAsync<Product>(sql); ;
         }
     }
 }

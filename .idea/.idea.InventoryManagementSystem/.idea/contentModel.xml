@@ -7,14 +7,21 @@
     <e p="C:\Users\monjurul.khan\RiderProjects\InventoryManagementSystem" t="IncludeFlat">
       <e p="Ims.Infrastructure" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Enum" t="Include">
+          <e p="ActionErrorCode.cs" t="Include" />
+        </e>
         <e p="Ims.Infrastructure.csproj" t="IncludeRecursive" />
         <e p="Interfaces" t="Include">
           <e p="IDbConnectionFactory.cs" t="Include" />
+          <e p="IProductRepositoryClient.cs" t="Include" />
           <e p="Irepository.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
+          <e p="ActionError.cs" t="Include" />
+          <e p="ActionResult.cs" t="Include" />
           <e p="BaseEntity.cs" t="Include" />
           <e p="Product.cs" t="Include" />
+          <e p="Result.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -27,6 +34,7 @@
         <e p="Repository" t="Include">
           <e p="DbconnectionFactory.cs" t="Include" />
           <e p="ProductRepository.cs" t="Include" />
+          <e p="ProductRepositoryClient.cs" t="Include" />
         </e>
       </e>
       <e p="InventoryManagementSystem.sln" t="IncludeFlat" />

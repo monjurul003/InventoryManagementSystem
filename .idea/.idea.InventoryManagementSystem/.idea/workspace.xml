@@ -4,15 +4,19 @@
     <projectFile>Ims.Infrastructure/Ims.Infrastructure.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ee2f49-4593-49b1-ac3a-9c5eb0d9a0b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Ims.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IDbConnectionFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/Irepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Model/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Model/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Repository/DbConnectionFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepository.cs" afterDir="false" />
+    <list default="true" id="a6ee2f49-4593-49b1-ac3a-9c5eb0d9a0b0" name="Default Changelist" comment="Add the solution file">
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Enum/ActionErrorCode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IProductRepositoryClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Model/ActionError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Model/ActionResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Model/Result.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepositoryClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InventoryManagementSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InventoryManagementSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InventoryManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InventoryManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ims.Infrastructure/Ims.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Ims.Infrastructure/Ims.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/Irepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ims.Infrastructure/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ims.Infrastructure/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +32,18 @@
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IDbConnectionFactory.cs" />
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/Products.cs" />
-      <option value="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/Irepository.cs" />
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/Product.cs" />
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Repository/DbconnectionFactory.cs" />
-      <option value="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepository.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/Result.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Enum/ActionErrorCode.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/ActionError.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Model/ActionResult.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/Irepository.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IProductRepositoryClient.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepositoryClient.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Interfaces/IRepository.cs" />
       <option value="$PROJECT_DIR$/Ims.Infrastructure/Program.cs" />
+      <option value="$PROJECT_DIR$/Ims.Infrastructure/Repository/ProductRepository.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lwBmz0Mb24OQlzx63F71Er2btm" />
@@ -81,8 +92,19 @@
       <updated>1608498437494</updated>
       <workItem from="1608498442747" duration="2920000" />
       <workItem from="1608567948303" duration="6209000" />
-      <workItem from="1608654240918" duration="3644000" />
+      <workItem from="1608654240918" duration="5355000" />
+      <workItem from="1608926503527" duration="1237000" />
+      <workItem from="1609177204510" duration="595000" />
+      <workItem from="1609387760466" duration="13506000" />
     </task>
+    <task id="LOCAL-00001" summary="Add the solution file">
+      <created>1608702539416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608702539416</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +127,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add the solution file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the solution file" />
   </component>
 </project>
